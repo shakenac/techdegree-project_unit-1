@@ -1,0 +1,26 @@
+In this project, you'll be tackling three main things:
+
+1. Build a collection of quotations — these are the quotes, author and other information that gets printed to the screen. You'll do this by creating a JavaScript array containing 2. JavaScript objects — one object for each quotation.
+3. Create a function that pulls one of those quotes out at random.
+Create a function that prints that quote to the screen.
+
+
+
+Here are things you need to do to pass this project:
+
+• Create an array of objects to hold the data for your quotes. Name the array 'quotes'
+
+• Each quote object in the 'quotes' array should have the following properties:
+	- A 'quote' and 'source' property which contains a string.
+	- An optional 'citation' and year 'property'
+
+• Create a function named 'getRandomQuote' and inside that function:
+	- Generate a random number
+	- Use it to select a quote object from the quotes array with box notation
+	- Return the randomly selected quote object
+
+• Create a function named 'printQuote' and inside that function:
+	- Create a variable that stores the 'getRandomQuote' function
+	- Create a variable to store the HTML string that contains the quote and source properties using the example HTML in the instructions
+	- Use separate conditional statements to add the citation and year properties only if they exist
+	- Set innerHTML property of the 'quote-box' div to equal the HTML string
