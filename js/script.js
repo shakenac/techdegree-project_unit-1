@@ -61,6 +61,8 @@ let quotes = [
 
 function getRandomQuote() {
   let randomNumber = Math.floor(Math.random() * quotes.length);
+ // return quotes[randomNumber];
+  console.log(quotes[randomNumber]);
 };
 
 
