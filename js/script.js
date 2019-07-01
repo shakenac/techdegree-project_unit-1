@@ -80,6 +80,22 @@ function printQuote() {
    return html;
 }
 
+/* Random Background Colors when quote changes */
+
+// Randomly generate number for the RGB color string
+let red;
+let green;
+let blue;
+let rgbColor;
+
+red = Math.floor(Math.random() * 256 );
+green = Math.floor(Math.random() * 256 );
+blue = Math.floor(Math.random() * 256 );
+rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+
+
+
+
 
 /*
   When the "Show another quote" button is clicked, the event listener
