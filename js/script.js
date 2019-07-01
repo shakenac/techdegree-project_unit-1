@@ -84,10 +84,10 @@ function printQuote() {
    html += '<p class="quote">' + randomQuote.quote + '</p>';
    html += '<p class="source">' + randomQuote.source;
    if (randomQuote.citation) {
-      html += '<p class="citation">' + randomQuote.citation;
+      html += '<span class="citation">' + randomQuote.citation + '</span>';
    }
    if (randomQuote.year) {
-      html += '<p class="year">' + randomQuote.year;
+      html += '<span class="year">' + randomQuote.year + '</span>';
    }
    html += '</p>';
    return html;
