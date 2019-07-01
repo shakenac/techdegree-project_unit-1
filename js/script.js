@@ -8,25 +8,39 @@ project 1 - A Random Quote Generator
 let quotes = [
   {
     quote: "I attribute my success to this: I never gave or took any excuse.",
-    source: "Florence Nightingale"
+    source: "Florence Nightingale",
+    citation: "The Life of Florence Nightengale",
+    year: "1913 (1861)",
+    tags: "inspirational"
+    // quoteinvestigator.com/2016/07/30/excuse/
   },
   {
     quote: "Every great developer you know got there by solving problems they were unqualified to solve until they actually did it.",
     source: "Patrick McKenzie",
     citation: "Twitter",
-    year: "2016"
+    year: "2016",
+    tags: "inspirational", "programming"
   },
   {
     quote: "Whether you think you can or you think you can't, you're right.",
-    source: "Henry Ford"
+    source: "Henry Ford",
+    citation: "The Reader’s Digest",
+    year: "1947",
+    tags: "inspirational"
+    // quoteinvestigator.com/2015/02/03/you-can/
   },
   {
     quote: "Everything you've ever wanted is on the other side of fear.",
-    source: "George Addair"
+    source: "George Addair",
+    tags: "inspirational"
   },
   {
     quote: "Unless you try to do something beyond what you have already mastered, you will never grow.",
-    source: "Ralph Waldo Emerson"
+    source: "Ronald E. Osborn",
+    citation: "Forbes: Thoughts on the Business of Life",
+    year: "1945",
+    tags: "inspirational"
+    // quoteinvestigator.com/2015/02/24/grow/#note-10698-1
   }
 ];
 
