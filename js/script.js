@@ -78,9 +78,11 @@ function printQuote() {
    // Use the getElementById() method and innerHTML property to change the HTML content of the <p> element with the 'quote-box' id
    document.getElementById('quote-box').innerHTML = html;
    return html;
+   document.getElementByTagName('body').style.background-color = rgbColor;
+
 }
 
-/* Random Background Colors when quote changes */
+/**** Random Background Colors when quote changes ****/
 
 // Randomly generate number for the RGB color string
 let red;
@@ -93,9 +95,13 @@ green = Math.floor(Math.random() * 256 );
 blue = Math.floor(Math.random() * 256 );
 rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
 
+//my notes, p.37
+//https://teamtreehouse.com/library/javascript-loops-arrays-and-objects/simplify-repetitive-tasks-with-loops/the-refactor-challenge-solution
 
-
-
+// Have the random rgb string replace whats in the css?
+//https://stackoverflow.com/questions/566203/changing-css-values-with-javascript
+//https://www.w3schools.com/jsref/met_element_getelementsbytagname.asp
+//document.getElementByTagName('body').style.background-color = rgbColor;
 
 /*
   When the "Show another quote" button is clicked, the event listener
