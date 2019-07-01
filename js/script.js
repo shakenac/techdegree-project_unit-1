@@ -11,7 +11,7 @@ let quotes = [
     source: "Florence Nightingale",
     citation: "The Life of Florence Nightengale",
     year: "1913 (1861)",
-    tags: "inspirational"
+    tags: "#inspirational"
     // quoteinvestigator.com/2016/07/30/excuse/
   },
   {
@@ -19,27 +19,27 @@ let quotes = [
     source: "Patrick McKenzie",
     citation: "Twitter",
     year: "2016",
-    tags: "inspirational, programming"
+    tags: "#inspirational, #programming"
   },
   {
     quote: "Whether you think you can or you think you can't, you're right.",
     source: "Henry Ford",
     citation: "The Reader’s Digest",
     year: "1947",
-    tags: "inspirational"
+    tags: "#inspirational"
     // quoteinvestigator.com/2015/02/03/you-can/
   },
   {
     quote: "Everything you've ever wanted is on the other side of fear.",
     source: "George Addair",
-    tags: "inspirational"
+    tags: "#inspirational"
   },
   {
     quote: "Unless you try to do something beyond what you have already mastered, you will never grow.",
     source: "Ronald E. Osborn",
     citation: "Forbes: Thoughts on the Business of Life",
     year: "1945",
-    tags: "inspirational, business"
+    tags: "#inspirational, #business"
     // quoteinvestigator.com/2015/02/24/grow/#note-10698-1
   }
 ];
@@ -55,25 +55,27 @@ function getRandomQuote() {
 
 
 // Create printQuote() function to generate and print a random quote
-  // Store the getRandomQuote() function into a variable 'randomQuote'
-  // Generate a random quote along with the source and store it in the string 'html'
-  // Use if statements to add the source and citation to the html string if applicable
-  // Use the getElementById() method and innerHTML property to change the HTML content of the <p> element with the 'quote-box' id
 function printQuote() {
+   // stored the getRandomQuote() function into a variable 'randomQuote'
    let randomQuote = getRandomQuote();
+   // Generate a random quote along with the source and store it in the string 'html'
    let html = '';
    html += '<p class="quote">' + randomQuote.quote + '</p>';
    html += '<p class="source">' + randomQuote.source;
+   // Use if statements to add the source and citation to the html string if applicable
    if (randomQuote.citation) {
       html += '<span class="citation">' + randomQuote.citation + '</span>';
    }
    if (randomQuote.year) {
       html += '<span class="year">' + randomQuote.year + '</span>';
    }
+   // if else statement to make the 'tags' property value it's own paragraph
    if (randomQuote.tags) {
-     html += '<span class="tags">' + randomQuote.tags + '</span>';
+     html += '<p class="tags">' + randomQuote.tags + '</p>';
+   }  else {
+      html += '</p>';
    }
-   html += '</p>';
+   // Use the getElementById() method and innerHTML property to change the HTML content of the <p> element with the 'quote-box' id
    document.getElementById('quote-box').innerHTML = html;
    return html;
 }
