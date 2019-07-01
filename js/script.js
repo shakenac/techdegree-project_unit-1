@@ -39,7 +39,7 @@ let quotes = [
     source: "Ronald E. Osborn",
     citation: "Forbes: Thoughts on the Business of Life",
     year: "1945",
-    tags: "inspirational"
+    tags: "inspirational", "business"
     // quoteinvestigator.com/2015/02/24/grow/#note-10698-1
   }
 ];
@@ -69,6 +69,9 @@ function printQuote() {
    }
    if (randomQuote.year) {
       html += '<span class="year">' + randomQuote.year + '</span>';
+   }
+   if (randomQuote.tags) {
+     html += '<span class="tags">' + randomQuote.tags + '</span>';
    }
    html += '</p>';
    document.getElementById('quote-box').innerHTML = html;
