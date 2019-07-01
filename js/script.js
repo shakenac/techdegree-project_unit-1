@@ -19,7 +19,7 @@ let quotes = [
     source: "Patrick McKenzie",
     citation: "Twitter",
     year: "2016",
-    tags: "inspirational", "programming"
+    tags: "inspirational, programming"
   },
   {
     quote: "Whether you think you can or you think you can't, you're right.",
@@ -39,7 +39,7 @@ let quotes = [
     source: "Ronald E. Osborn",
     citation: "Forbes: Thoughts on the Business of Life",
     year: "1945",
-    tags: "inspirational", "business"
+    tags: "inspirational, business"
     // quoteinvestigator.com/2015/02/24/grow/#note-10698-1
   }
 ];
