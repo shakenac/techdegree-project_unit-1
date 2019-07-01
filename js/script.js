@@ -81,10 +81,13 @@ function getRandomQuote() {
 function printQuote() {
    let randomQuote = getRandomQuote();
    let html = '';
-   html += '<p class="quote">' + randomQuote.quote + '</p>';
-   html += '<p class="source">' + randomQuote.source + '</p>';
-   html += '<p class="citation">' + randomQuote.citation + '</p>';
-   html += '<p class="year">' + randomQuote.year + '</p>'
+   html += '<p class="quote">' + randomQuote['quote'] + '</p>';
+   html += '<p class="source">' + randomQuote['source'];
+   if (randomQuote ===) {
+      html += '<p class="citation">' + randomQuote['citation'];
+      html += '<p class="year">' + randomQuote['year'];
+   }
+   html += '</p>';
    console.log(html);
 }
 
