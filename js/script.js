@@ -90,6 +90,7 @@ function printQuote() {
       html += '<span class="year">' + randomQuote.year + '</span>';
    }
    html += '</p>';
+   document.getElementById('quote-box').innerHTML = html;
    return html;
 }
 
