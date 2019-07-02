@@ -44,7 +44,6 @@ let quotes = [
   }
 ];
 
-
 // Create getRandomQuote() function to create a random number
   // Store the random number in the 'randomNumber' variable
   // return that random quote using the randomNumber variable
@@ -53,6 +52,11 @@ function getRandomQuote() {
    return quotes[randomNumber];
 };
 
+function getRandomColor() {
+  // this getElementsByTagName method returns all the elements with the body tag
+  // the getElementsByTagName gives you an array like object, [0] returns the first (and only) body tag
+  document.getElementsByTagName('body')[0].style.background = 'blue';
+}
 
 // Create printQuote() function to generate and print a random quote
 function printQuote() {
@@ -78,8 +82,7 @@ function printQuote() {
    // Use the getElementById() method and innerHTML property to change the HTML content of the <p> element with the 'quote-box' id
    document.getElementById('quote-box').innerHTML = html;
    return html;
-   document.getElementByTagName('body').style.background-color = rgbColor;
-
+   getRandomColor();
 }
 
 /**** Random Background Colors when quote changes ****/
@@ -95,13 +98,6 @@ green = Math.floor(Math.random() * 256 );
 blue = Math.floor(Math.random() * 256 );
 rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
 
-//my notes, p.37
-//https://teamtreehouse.com/library/javascript-loops-arrays-and-objects/simplify-repetitive-tasks-with-loops/the-refactor-challenge-solution
-
-// Have the random rgb string replace whats in the css?
-//https://stackoverflow.com/questions/566203/changing-css-values-with-javascript
-//https://www.w3schools.com/jsref/met_element_getelementsbytagname.asp
-//document.getElementByTagName('body').style.background-color = rgbColor;
 
 /*
   When the "Show another quote" button is clicked, the event listener
