@@ -61,8 +61,10 @@ function getRandomColor() {
 
   // this getElementsByTagName method returns all the elements with the body tag
   // the getElementsByTagName gives you an array like object, [0] returns the first (and only) body tag
+  // added the rgbColor variable to change the css to a random color
   document.getElementsByTagName('body')[0].style.background = rgbColor;
 }
+
 
 // Create printQuote() function to generate and print a random quote
 function printQuote() {
@@ -89,6 +91,12 @@ function printQuote() {
    document.getElementById('quote-box').innerHTML = html;
    getRandomColor();
 }
+
+// QuoteTimer() function automatically generates a new quote every 10 seconds
+function quoteTimer() {
+  setInterval(printQuote, 10000);
+}
+quoteTimer()
 
 /*
   When the "Show another quote" button is clicked, the event listener
