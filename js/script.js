@@ -65,6 +65,10 @@ function getRandomColor() {
   document.getElementsByTagName('body')[0].style.background = rgbColor;
 }
 
+// QuoteTimer() function automatically generates a new quote every 10 seconds
+function quoteTimer() {
+  setInterval(printQuote, 10000);
+}
 
 // Create printQuote() function to generate and print a random quote
 function printQuote() {
@@ -89,14 +93,11 @@ function printQuote() {
    }
    // Use the getElementById() method and innerHTML property to change the HTML content of the <p> element with the 'quote-box' id
    document.getElementById('quote-box').innerHTML = html;
+   // call getRandomColor function to generate new color each time button is pressed
    getRandomColor();
 }
+   quoteTimer()
 
-// QuoteTimer() function automatically generates a new quote every 10 seconds
-function quoteTimer() {
-  setInterval(printQuote, 10000);
-}
-quoteTimer()
 
 /*
   When the "Show another quote" button is clicked, the event listener
