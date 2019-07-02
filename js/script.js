@@ -63,6 +63,9 @@ function getRandomColor() {
   // the getElementsByTagName gives you an array like object, [0] returns the first (and only) body tag
   // added the rgbColor variable to change the css to a random color
   document.getElementsByTagName('body')[0].style.background = rgbColor;
+
+  // change color of button to match the random background color
+  document.getElementsByTagName('button')[0].style.background = rgbColor;
 }
 
 // QuoteTimer() function automatically generates a new quote every 10 seconds
@@ -78,6 +81,7 @@ function printQuote() {
    let html = '';
    html += '<p class="quote">' + randomQuote.quote + '</p>';
    html += '<p class="source">' + randomQuote.source;
+
    // Use if statements to add the source and citation to the html string if applicable
    if (randomQuote.citation) {
       html += '<span class="citation">' + randomQuote.citation + '</span>';
@@ -85,18 +89,23 @@ function printQuote() {
    if (randomQuote.year) {
       html += '<span class="year">' + randomQuote.year + '</span>';
    }
+
    // if else statement to make the 'tags' property value it's own paragraph
    if (randomQuote.tags) {
      html += '<p class="tags">' + randomQuote.tags + '</p>';
    }  else {
       html += '</p>';
    }
+
    // Use the getElementById() method and innerHTML property to change the HTML content of the <p> element with the 'quote-box' id
    document.getElementById('quote-box').innerHTML = html;
+
    // call getRandomColor function to generate new color each time button is pressed
    getRandomColor();
 }
-   quoteTimer()
+
+// call quoteTimer function to generate new quote every 10 seconds
+quoteTimer()
 
 
 /*
