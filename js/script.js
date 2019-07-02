@@ -70,7 +70,7 @@ function getRandomColor() {
 
 // quoteTimer() function automatically generates a new quote every 20 seconds
 function quoteTimer() {
-  setInterval(printQuote, 20000);
+  setInterval(printQuote, 10000);
 }
 
 
