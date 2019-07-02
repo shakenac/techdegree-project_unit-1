@@ -81,7 +81,7 @@ function printQuote() {
    }
    // Use the getElementById() method and innerHTML property to change the HTML content of the <p> element with the 'quote-box' id
    document.getElementById('quote-box').innerHTML = html;
-   return html;
+   // removed the return html from printQuote function so it doesn't stop the execution of the getRandomColor function
    getRandomColor();
 }
 
