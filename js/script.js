@@ -53,9 +53,15 @@ function getRandomQuote() {
 };
 
 function getRandomColor() {
+  // Randomly generate number for the RGB color string
+  let red = Math.floor(Math.random() * 256 );
+  let green = Math.floor(Math.random() * 256 );
+  let blue = Math.floor(Math.random() * 256 );
+  let rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+
   // this getElementsByTagName method returns all the elements with the body tag
   // the getElementsByTagName gives you an array like object, [0] returns the first (and only) body tag
-  document.getElementsByTagName('body')[0].style.background = 'blue';
+  document.getElementsByTagName('body')[0].style.background = rgbColor;
 }
 
 // Create printQuote() function to generate and print a random quote
@@ -81,23 +87,8 @@ function printQuote() {
    }
    // Use the getElementById() method and innerHTML property to change the HTML content of the <p> element with the 'quote-box' id
    document.getElementById('quote-box').innerHTML = html;
-   // removed the return html from printQuote function so it doesn't stop the execution of the getRandomColor function
    getRandomColor();
 }
-
-/**** Random Background Colors when quote changes ****/
-
-// Randomly generate number for the RGB color string
-let red;
-let green;
-let blue;
-let rgbColor;
-
-red = Math.floor(Math.random() * 256 );
-green = Math.floor(Math.random() * 256 );
-blue = Math.floor(Math.random() * 256 );
-rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
-
 
 /*
   When the "Show another quote" button is clicked, the event listener
